@@ -10,11 +10,11 @@ function SignUp() {
   const handleCreateAccount = async (e) => {
     e.preventDefault();
     try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        navigate('/')
-    } catch(error) {
-        alert("Something has gone wrong. Please try again");
-        console.error(error)
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+      alert("Something has gone wrong. Please try again");
     }
   };
 
